@@ -78,9 +78,19 @@ export const ragMiddleware: Experimental_LanguageModelV1Middleware = {
       value: hypotheticalAnswer,
     });
 
-    // find relevant chunks based on the selection
+    // find relevant chunks from shared knowledge base
+    // If no files selected, search all shared documents
+    let searchPaths: string[];
+    if (selection.length === 0) {
+      // Search all shared documents
+      searchPaths = ['shared/%']; // This will be handled in the database query
+    } else {
+      // Search specific shared documents
+      searchPaths = selection.map((path) => `shared/${path}`);
+    }
+    
     const chunksBySelection = await getChunksByFilePaths({
-      filePaths: selection.map((path) => `${session.user?.email}/${path}`),
+      filePaths: searchPaths,
     });
 
     const chunksWithSimilarity = chunksBySelection.map((chunk) => ({

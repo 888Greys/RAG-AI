@@ -1,5 +1,5 @@
 import { drizzle } from "drizzle-orm/postgres-js";
-import { desc, eq, inArray } from "drizzle-orm";
+import { desc, eq, inArray, sql } from "drizzle-orm";
 import postgres from "postgres";
 import { genSaltSync, hashSync } from "bcrypt-ts";
 import { chat, chunk, user } from "@/schema";
@@ -133,8 +133,21 @@ export async function getChunksByFilePaths({
   filePaths: Array<string>;
 }) {
   if (!isDatabaseAvailable) {
+    // For mock: if searching for 'shared/%', return all shared chunks
+    if (filePaths.includes('shared/%')) {
+      return mockChunks.filter(c => c.filePath.startsWith('shared/'));
+    }
     return mockChunks.filter(c => filePaths.includes(c.filePath));
   }
+  
+  // Handle wildcard search for all shared documents
+  if (filePaths.includes('shared/%')) {
+    return await db
+      .select()
+      .from(chunk)
+      .where(sql`${chunk.filePath} LIKE 'shared/%'`);
+  }
+  
   return await db
     .select()
     .from(chunk)
