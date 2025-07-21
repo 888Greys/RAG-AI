@@ -36,9 +36,19 @@ export default function Page() {
             <span className="text-white text-xl sm:text-2xl">🎓</span>
           </div>
           <h3 className="text-xl sm:text-2xl font-semibold dark:text-zinc-50">Join KCA University</h3>
-          <p className="text-sm text-gray-500 dark:text-zinc-400">
+          <p className="text-sm text-gray-500 dark:text-zinc-400 mb-3">
             Create your account to access the Knowledge Base
           </p>
+          <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-3 text-left">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="text-lg">🚧</span>
+              <span className="text-sm font-medium text-amber-800 dark:text-amber-200">Preview Version</span>
+            </div>
+            <p className="text-xs text-amber-700 dark:text-amber-300 leading-relaxed">
+              This app is in preview! We're uploading all KCA documents. Soon it will know everything about KCA University. 
+              The developer is busy, but contributions are welcome!
+            </p>
+          </div>
         </div>
         <Form action={formAction}>
           <SubmitButton>Sign Up</SubmitButton>

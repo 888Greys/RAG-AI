@@ -13,9 +13,9 @@ export const Navbar = async () => {
           <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-to-r from-blue-500 to-purple-600 rounded-md flex items-center justify-center flex-shrink-0">
             <span className="text-white text-xs font-bold">KB</span>
           </div>
-          <span className="text-xs sm:text-sm font-medium text-zinc-900 dark:text-zinc-100 truncate">
+          <Link href="/landing" className="text-xs sm:text-sm font-medium text-zinc-900 dark:text-zinc-100 truncate hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
             KCA University KB
-          </span>
+          </Link>
         </div>
       </div>
       
