@@ -56,19 +56,55 @@ export default function LandingPage() {
               APA formatting, and everything in between. No more searching through PDFs!
             </p>
             
-            {/* Preview Notice */}
-            <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl p-6 mb-8 max-w-2xl mx-auto">
-              <div className="flex items-center gap-3 mb-3">
+            {/* Developer Message & Preview Notice */}
+            <div className="bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 border border-amber-200 dark:border-amber-800 rounded-xl p-6 mb-8 max-w-4xl mx-auto">
+              <div className="flex items-center gap-3 mb-4">
                 <span className="text-2xl">🚧</span>
-                <h3 className="text-lg font-semibold text-amber-800 dark:text-amber-200">
-                  Preview Version
+                <h3 className="text-xl font-bold text-amber-800 dark:text-amber-200">
+                  Preview Version - Developer Message
                 </h3>
               </div>
-              <p className="text-amber-700 dark:text-amber-300 text-sm leading-relaxed">
-                This app is currently in preview! We&apos;re working hard to upload all KCA University documents. 
-                Soon, it will know everything about KCA University. The developer is quite busy, but if you&apos;re 
-                willing to contribute documents or help improve the system, you&apos;re very welcome!
-              </p>
+              <div className="space-y-4 text-amber-700 dark:text-amber-300">
+                <p className="text-sm leading-relaxed">
+                  <strong>Hey KCA Students!</strong> This app is currently in preview and we&apos;re working hard to upload all KCA University documents. 
+                  Soon, it will know everything about KCA University. The developer is quite busy, but if you&apos;re 
+                  willing to contribute documents or help improve the system, you&apos;re very welcome!
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                  <div className="bg-white/50 dark:bg-zinc-800/50 rounded-lg p-4">
+                    <h4 className="font-semibold text-amber-800 dark:text-amber-200 mb-2 flex items-center gap-2">
+                      <span>💻</span> Contribute on GitHub
+                    </h4>
+                    <a
+                      href="https://github.com/888Greys/RAG-AI"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 dark:text-blue-400 hover:underline text-sm break-all"
+                    >
+                      github.com/888Greys/RAG-AI
+                    </a>
+                  </div>
+                  
+                  <div className="bg-white/50 dark:bg-zinc-800/50 rounded-lg p-4">
+                    <h4 className="font-semibold text-amber-800 dark:text-amber-200 mb-2 flex items-center gap-2">
+                      <span>📱</span> Contact Developer
+                    </h4>
+                    <a
+                      href="https://wa.me/254715558014"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-green-600 dark:text-green-400 hover:underline text-sm"
+                    >
+                      WhatsApp: +254715558014
+                    </a>
+                  </div>
+                </div>
+                
+                <p className="text-xs italic">
+                  🤝 Open source project - contributions welcome! Help us make this the ultimate KCA University resource.
+                </p>
+              </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -216,28 +252,60 @@ export default function LandingPage() {
 
             <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-zinc-800 dark:to-zinc-700 rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-6">
-                Technology Stack
+                🛠️ Complete Technology Stack
               </h3>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-3">
                 {[
-                  { name: "Next.js 15", desc: "React Framework" },
-                  { name: "Groq AI", desc: "Ultra-fast LLM" },
-                  { name: "Supabase", desc: "Database & Auth" },
-                  { name: "Google AI", desc: "Embeddings" },
-                  { name: "Vercel", desc: "Deployment" },
-                  { name: "TypeScript", desc: "Type Safety" },
-                  { name: "Tailwind CSS", desc: "Styling" },
-                  { name: "Framer Motion", desc: "Animations" }
+                  { name: "Next.js 15", desc: "React Framework", category: "Frontend" },
+                  { name: "React 19", desc: "UI Library", category: "Frontend" },
+                  { name: "TypeScript", desc: "Type Safety", category: "Language" },
+                  { name: "Tailwind CSS", desc: "Styling", category: "Styling" },
+                  { name: "Framer Motion", desc: "Animations", category: "UI/UX" },
+                  { name: "Groq AI", desc: "Ultra-fast LLM", category: "AI" },
+                  { name: "Google AI", desc: "Embeddings", category: "AI" },
+                  { name: "OpenAI", desc: "GPT Models", category: "AI" },
+                  { name: "Vercel AI SDK", desc: "AI Integration", category: "AI" },
+                  { name: "PostgreSQL", desc: "Database", category: "Backend" },
+                  { name: "Drizzle ORM", desc: "Database ORM", category: "Backend" },
+                  { name: "NextAuth.js", desc: "Authentication", category: "Auth" },
+                  { name: "bcrypt-ts", desc: "Password Hashing", category: "Security" },
+                  { name: "Vercel", desc: "Deployment", category: "Infrastructure" },
+                  { name: "Vercel Blob", desc: "File Storage", category: "Storage" },
+                  { name: "Vercel KV", desc: "Redis Cache", category: "Cache" },
+                  { name: "PDF Parse", desc: "Document Processing", category: "Processing" },
+                  { name: "Langchain", desc: "Text Splitting", category: "Processing" },
+                  { name: "React Markdown", desc: "Markdown Rendering", category: "UI" },
+                  { name: "Sonner", desc: "Toast Notifications", category: "UI" },
+                  { name: "Zod", desc: "Schema Validation", category: "Validation" },
+                  { name: "SWR", desc: "Data Fetching", category: "Data" },
+                  { name: "D3 Scale", desc: "Data Visualization", category: "Visualization" },
+                  { name: "ESLint", desc: "Code Linting", category: "DevTools" }
                 ].map((tech, index) => (
-                  <div key={index} className="bg-white dark:bg-zinc-800 rounded-lg p-3">
+                  <div key={index} className="bg-white dark:bg-zinc-800 rounded-lg p-3 hover:shadow-md transition-shadow">
                     <div className="font-semibold text-zinc-900 dark:text-zinc-100 text-sm">
                       {tech.name}
                     </div>
-                    <div className="text-xs text-zinc-500 dark:text-zinc-400">
+                    <div className="text-xs text-zinc-500 dark:text-zinc-400 mb-1">
                       {tech.desc}
+                    </div>
+                    <div className="text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-2 py-1 rounded-full inline-block">
+                      {tech.category}
                     </div>
                   </div>
                 ))}
+              </div>
+              <div className="mt-6 p-4 bg-white/50 dark:bg-zinc-800/50 rounded-lg">
+                <h4 className="font-semibold text-zinc-900 dark:text-zinc-100 mb-2 flex items-center gap-2">
+                  <span>🏗️</span> Architecture Highlights
+                </h4>
+                <ul className="text-sm text-zinc-600 dark:text-zinc-400 space-y-1">
+                  <li>• <strong>RAG (Retrieval Augmented Generation)</strong> for accurate, context-aware responses</li>
+                  <li>• <strong>HyDE (Hypothetical Document Embeddings)</strong> for improved document retrieval</li>
+                  <li>• <strong>Vector embeddings</strong> with Google AI for semantic search</li>
+                  <li>• <strong>Edge runtime</strong> deployment for global low-latency access</li>
+                  <li>• <strong>Server-side rendering</strong> with dynamic authentication</li>
+                  <li>• <strong>Mobile-first responsive design</strong> optimized for all devices</li>
+                </ul>
               </div>
             </div>
           </div>

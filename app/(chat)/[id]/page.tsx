@@ -5,6 +5,9 @@ import { notFound } from "next/navigation";
 import { Chat as PreviewChat } from "@/components/chat";
 import { auth } from "@/app/(auth)/auth";
 
+// Force dynamic rendering to prevent prerendering issues
+export const dynamic = 'force-dynamic';
+
 export default async function Page({ params }: { params: any }) {
   const { id } = params;
   const chatFromDb = await getChatById({ id });
