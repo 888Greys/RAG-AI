@@ -1,62 +1,126 @@
-# 🧠 Internal Knowledge Base
+# 🎓 KCA University AI Knowledge Base
 
-A modern, AI-powered knowledge management system built with **Next.js**, **Groq**, **Supabase**, and **RAG (Retrieval Augmented Generation)**. This application enables organizations to create a shared knowledge base where users can ask questions and get accurate answers from company documents, policies, and technical documentation.
+A modern, AI-powered knowledge management system specifically built for **KCA University students**. Get instant answers about admission requirements, library services, APA formatting, and everything related to KCA University life. Built with **Next.js 15**, **Groq AI**, **PostgreSQL**, and **RAG (Retrieval Augmented Generation)**.
 
-![Knowledge Base Demo](https://img.shields.io/badge/Demo-Live-brightgreen) ![Next.js](https://img.shields.io/badge/Next.js-15-black) ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue) ![Groq](https://img.shields.io/badge/Groq-Llama%204-orange) ![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-green)
+![KCA University AI](https://img.shields.io/badge/KCA-University%20AI-blue) ![Next.js](https://img.shields.io/badge/Next.js-15-black) ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue) ![Groq](https://img.shields.io/badge/Groq-Llama%204%20Scout-orange) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-green) ![Preview](https://img.shields.io/badge/Status-Preview-yellow)
+
+## 🚧 Preview Version - Developer Message
+
+**Hey KCA Students!** This app is currently in preview and we're working hard to upload all KCA University documents. Soon, it will know everything about KCA University. The developer is quite busy, but if you're willing to contribute documents or help improve the system, you're very welcome!
+
+### 📞 Get In Touch
+
+- **📱 WhatsApp**: [+254715558014](https://wa.me/254715558014)
+- **💻 GitHub**: [888Greys/RAG-AI](https://github.com/888Greys/RAG-AI)
+- **🤝 Open Source**: Contributions welcome!
+
+### 🎯 Our Vision
+
+To create the most comprehensive, AI-powered knowledge base for KCA University students. A single place where any student can get instant, accurate answers about university life, academics, services, and procedures. Together, we can make studying at KCA easier for everyone!
 
 ## ✨ Features
 
-### 🤖 **Advanced AI Chat**
-- **Groq-powered responses** with Llama 4 Scout (ultra-fast inference)
+### 🤖 **Lightning Fast AI Responses**
+- **Groq-powered responses** with Llama 4 Scout (1-3 second responses)
 - **RAG (Retrieval Augmented Generation)** for accurate, context-aware answers
-- **HyDE (Hypothetical Document Embeddings)** for improved retrieval accuracy
-- **Smart classification** - only uses RAG for questions, not statements
+- **HyDE (Hypothetical Document Embeddings)** for improved document retrieval
+- **Smart classification** - determines when to use knowledge base vs general chat
 
-### 📚 **Knowledge Management**
-- **Shared document storage** - all users access the same knowledge base
-- **Vector embeddings** stored in Supabase PostgreSQL
-- **Semantic search** through company documents
-- **Support for multiple document types** (policies, technical docs, product specs)
+### 📚 **KCA University Knowledge**
+- **Admission Information** - Requirements, deadlines, and processes
+- **Library & E-Library Help** - Access guides and research resources
+- **APA Formatting Assistant** - APA 7th edition citations and guidelines
+- **Student Services** - Information about university services and procedures
+- **Academic Resources** - Course information and academic support
 
-### 🔐 **Authentication & Security**
-- **Secure user authentication** with NextAuth.js
-- **Supabase integration** for user management
-- **JWT sessions** with proper security
-- **Protected routes** and API endpoints
+### 🔐 **Secure Authentication**
+- **NextAuth.js integration** with secure user sessions
+- **PostgreSQL user management** with encrypted passwords
+- **Protected routes** and personalized chat history
+- **Session persistence** across devices
 
-### 🎨 **Modern UI/UX**
-- **Professional design** with gradients and glass morphism
-- **Responsive interface** - works on desktop and mobile
-- **Real-time chat** with loading states and animations
-- **Knowledge base branding** with clear purpose communication
+### 🎨 **Mobile-First Design**
+- **Responsive interface** - Perfect for smartphones and tablets
+- **Modern UI/UX** with gradients and smooth animations
+- **Dark/Light mode** support
+- **Optimized for students on the go**
 
-### ⚡ **Performance**
-- **Lightning-fast responses** (~1-3 seconds with Groq)
+### ⚡ **Performance & Reliability**
+- **Ultra-fast responses** with Groq's inference engine
 - **Efficient vector search** in PostgreSQL
-- **Optimized embeddings** with Google's text-embedding-004
-- **Serverless deployment** on Vercel
+- **Edge deployment** on Vercel for global access
+- **Optimized for mobile networks**
 
 ## 🚀 Live Demo
 
-**Try it now:** [https://ai-sdk-preview-internal-knowledge-base-example-qd8atwsp1.vercel.app](https://ai-sdk-preview-internal-knowledge-base-example-qd8atwsp1.vercel.app)
+**Try it now:** [KCA University AI Assistant](https://ai-sdk-preview-internal-knowledge-base-example-npj2mhcg1.vercel.app)
 
 ### Sample Questions to Try:
-- "What's the company vacation policy?"
-- "How do I authenticate with the API?"
-- "What are the system requirements?"
-- "What's the expense reimbursement process?"
+- "How do I access the KCA University e-library?"
+- "What are the admission requirements for KCA University?"
+- "How do I format citations in APA 7th edition?"
+- "What student services are available at KCA University?"
+- "How do I apply for accommodation at KCA?"
+- "What are the library opening hours?"
 
-## 🛠️ Tech Stack
+## 🛠️ Complete Technology Stack
 
-| Component | Technology | Purpose |
-|-----------|------------|---------|
-| **Frontend** | Next.js 15, TypeScript, Tailwind CSS | Modern React framework with styling |
-| **AI/LLM** | Groq (Llama 4 Scout) | Ultra-fast AI inference |
-| **Embeddings** | Google text-embedding-004 | High-quality vector embeddings |
-| **Database** | Supabase (PostgreSQL) | Vector storage and user management |
-| **Authentication** | NextAuth.js | Secure user sessions |
-| **Deployment** | Vercel | Serverless hosting with global CDN |
-| **Animations** | Framer Motion | Smooth UI transitions |
+### Frontend & UI
+| Technology | Purpose | Category |
+|------------|---------|----------|
+| **Next.js 15** | React Framework | Frontend |
+| **React 19** | UI Library | Frontend |
+| **TypeScript** | Type Safety | Language |
+| **Tailwind CSS** | Styling | Styling |
+| **Framer Motion** | Animations | UI/UX |
+
+### AI & Machine Learning
+| Technology | Purpose | Category |
+|------------|---------|----------|
+| **Groq AI** | Ultra-fast LLM | AI |
+| **Google AI** | Embeddings | AI |
+| **OpenAI** | GPT Models | AI |
+| **Vercel AI SDK** | AI Integration | AI |
+
+### Backend & Database
+| Technology | Purpose | Category |
+|------------|---------|----------|
+| **PostgreSQL** | Database | Backend |
+| **Drizzle ORM** | Database ORM | Backend |
+| **NextAuth.js** | Authentication | Auth |
+| **bcrypt-ts** | Password Hashing | Security |
+
+### Infrastructure & Storage
+| Technology | Purpose | Category |
+|------------|---------|----------|
+| **Vercel** | Deployment | Infrastructure |
+| **Vercel Blob** | File Storage | Storage |
+| **Vercel KV** | Redis Cache | Cache |
+
+### Processing & Data
+| Technology | Purpose | Category |
+|------------|---------|----------|
+| **PDF Parse** | Document Processing | Processing |
+| **Langchain** | Text Splitting | Processing |
+| **React Markdown** | Markdown Rendering | UI |
+| **Sonner** | Toast Notifications | UI |
+| **Zod** | Schema Validation | Validation |
+| **SWR** | Data Fetching | Data |
+| **D3 Scale** | Data Visualization | Visualization |
+
+### Development Tools
+| Technology | Purpose | Category |
+|------------|---------|----------|
+| **ESLint** | Code Linting | DevTools |
+
+### 🏗️ Architecture Highlights
+
+- **RAG (Retrieval Augmented Generation)** for accurate, context-aware responses
+- **HyDE (Hypothetical Document Embeddings)** for improved document retrieval
+- **Vector embeddings** with Google AI for semantic search
+- **Edge runtime** deployment for global low-latency access
+- **Server-side rendering** with dynamic authentication
+- **Mobile-first responsive design** optimized for all devices
 
 ## 📋 Prerequisites
 
@@ -66,15 +130,15 @@ Before you begin, ensure you have:
 - **npm/yarn/pnpm** package manager
 - **Groq API key** (get from [console.groq.com](https://console.groq.com))
 - **Google AI API key** (get from [aistudio.google.com](https://aistudio.google.com))
-- **Supabase project** (create at [supabase.com](https://supabase.com))
+- **PostgreSQL database** (Supabase recommended)
 
 ## 🚀 Quick Start
 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/internal-knowledge-base.git
-cd internal-knowledge-base
+git clone https://github.com/888Greys/RAG-AI.git
+cd RAG-AI
 ```
 
 ### 2. Install Dependencies
@@ -101,16 +165,20 @@ GOOGLE_GENERATIVE_AI_API_KEY=your-google-api-key
 # NextAuth secret (generate with: openssl rand -base64 32)
 AUTH_SECRET=your-auth-secret
 
-# Supabase PostgreSQL connection string
-POSTGRES_URL=your-supabase-postgres-url
+# PostgreSQL connection string
+POSTGRES_URL=your-postgres-url
 
 # Optional: Vercel Blob for file uploads
 BLOB_READ_WRITE_TOKEN=your-vercel-blob-token
+
+# Optional: Vercel KV for caching
+KV_REST_API_URL=your-kv-url
+KV_REST_API_TOKEN=your-kv-token
 ```
 
 ### 4. Set Up Database
 
-The application uses Supabase PostgreSQL with the following schema:
+The application uses PostgreSQL with the following schema:
 
 ```sql
 -- Users table
@@ -136,18 +204,20 @@ CREATE TABLE "Chunk" (
 );
 ```
 
-### 5. Upload Sample Documents
+### 5. Upload KCA University Documents
 
 Run the document upload script to populate your knowledge base:
 
 ```bash
+# Upload general documents
 npx tsx upload-documents.ts
-```
 
-This will add sample documents including:
-- Company handbook (policies, benefits, remote work)
-- Technical documentation (API, deployment, database)
-- Product specifications (features, requirements, security)
+# Upload KCA-specific documents
+npx tsx upload-kca-documents.ts
+
+# Upload PDF documents
+npx tsx upload-pdfs.ts
+```
 
 ### 6. Start Development Server
 
@@ -155,30 +225,30 @@ This will add sample documents including:
 npm run dev
 ```
 
-Visit [http://localhost:3000](http://localhost:3000) to see your knowledge base!
+Visit [http://localhost:3000](http://localhost:3000) to see your KCA University AI Assistant!
 
 ## 📖 How It Works
 
-### RAG Pipeline
+### RAG Pipeline for KCA University
 
-1. **Document Processing**: Documents are split into chunks and embedded using Google's text-embedding-004
-2. **Storage**: Chunks and embeddings are stored in Supabase PostgreSQL
-3. **Query Processing**: User questions are classified and processed through HyDE
-4. **Retrieval**: Relevant document chunks are found using cosine similarity
-5. **Generation**: Groq's Llama 4 Scout generates responses with retrieved context
+1. **Document Processing**: KCA University documents are split into chunks and embedded using Google's text-embedding-004
+2. **Storage**: Chunks and embeddings are stored in PostgreSQL with vector search capabilities
+3. **Query Processing**: Student questions are classified and processed through HyDE
+4. **Retrieval**: Relevant KCA document chunks are found using cosine similarity
+5. **Generation**: Groq's Llama 4 Scout generates responses with KCA-specific context
 
 ### Architecture Flow
 
 ```
-User Question → Classification → HyDE → Vector Search → Context Injection → AI Response
+Student Question → Classification → HyDE → Vector Search → KCA Context → AI Response
 ```
 
 ### Key Components
 
-- **RAG Middleware**: Handles retrieval and context injection
-- **Chat Interface**: Modern UI with real-time messaging
-- **Authentication**: Secure user management with NextAuth
-- **Vector Database**: Efficient similarity search in PostgreSQL
+- **RAG Middleware**: Handles retrieval and context injection for KCA documents
+- **Chat Interface**: Mobile-optimized UI for students
+- **Authentication**: Secure student account management
+- **Vector Database**: Efficient search through KCA University documents
 
 ## 🔧 Configuration
 
@@ -188,44 +258,45 @@ User Question → Classification → HyDE → Vector Search → Context Injectio
 - **Classification**: `llama-3.1-8b-instant` (Groq)
 - **Embeddings**: `text-embedding-004` (Google)
 
-### Customization
+### Customization for KCA
 
 You can customize the knowledge base by:
 
-1. **Adding Documents**: Use the upload script with your own content
-2. **Modifying UI**: Update components in `/components`
-3. **Changing Models**: Update model names in `/ai/index.ts`
-4. **Styling**: Modify Tailwind classes for different branding
+1. **Adding KCA Documents**: Use upload scripts with official KCA content
+2. **Modifying UI**: Update branding in `/components` for KCA colors/logos
+3. **Changing Models**: Update model configurations in `/ai/index.ts`
+4. **Styling**: Modify Tailwind classes for KCA University branding
 
 ## 📁 Project Structure
 
 ```
 ├── ai/                     # AI configuration and RAG middleware
 ├── app/                    # Next.js app router
-│   ├── (auth)/            # Authentication pages and logic
+│   ├── (auth)/            # Authentication pages (login/register)
 │   ├── (chat)/            # Chat interface and API routes
+│   ├── landing/           # Landing page with developer info
 │   └── db.ts              # Database functions
-├── components/            # React components
+├── components/            # React components (chat, forms, etc.)
 ├── drizzle/              # Database migrations
 ├── utils/                # Utility functions
+├── pdfs/                 # KCA University PDF documents
 ├── schema.ts             # Database schema
-└── upload-documents.ts   # Document upload script
+├── upload-documents.ts   # General document upload
+├── upload-kca-documents.ts # KCA-specific document upload
+└── upload-pdfs.ts        # PDF document upload
 ```
 
 ## 🚀 Deployment
 
 ### Deploy to Vercel (Recommended)
 
-1. **Push to GitHub**:
-```bash
-git add .
-git commit -m "Initial commit"
-git push origin main
-```
+1. **Fork the Repository**:
+   - Go to [github.com/888Greys/RAG-AI](https://github.com/888Greys/RAG-AI)
+   - Click "Fork" to create your own copy
 
 2. **Connect to Vercel**:
    - Go to [vercel.com](https://vercel.com)
-   - Import your GitHub repository
+   - Import your forked repository
    - Add environment variables
    - Deploy!
 
@@ -235,26 +306,62 @@ git push origin main
    - `AUTH_SECRET`
    - `POSTGRES_URL`
 
-### Alternative Deployments
-
-- **Railway**: Great for full-stack apps
-- **DigitalOcean**: App Platform
-- **AWS**: Amplify or EC2
-- **Google Cloud**: Cloud Run
-
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+We welcome contributions from KCA University students and developers! Here's how you can help:
+
+### 🎓 For KCA Students
+
+- **Share Documents**: Help us upload official KCA University documents
+- **Report Issues**: Let us know if information is missing or incorrect
+- **Suggest Features**: What would make this more useful for students?
+- **Test & Feedback**: Use the app and share your experience
+
+### 💻 For Developers
+
+- **Code Contributions**: Improve features, fix bugs, add functionality
+- **Documentation**: Help improve this README and other docs
+- **UI/UX**: Make the interface even better for students
+- **Performance**: Optimize for mobile and slow connections
 
 ### Development Workflow
 
-1. Fork the repository
+1. Fork the repository from [github.com/888Greys/RAG-AI](https://github.com/888Greys/RAG-AI)
 2. Create a feature branch: `git checkout -b feature/amazing-feature`
 3. Make your changes
-4. Run tests: `npm test`
+4. Test thoroughly: `npm run build` and `npm run dev`
 5. Commit changes: `git commit -m 'Add amazing feature'`
 6. Push to branch: `git push origin feature/amazing-feature`
 7. Open a Pull Request
+
+### 📞 Contact for Contributions
+
+- **📱 WhatsApp**: [+254715558014](https://wa.me/254715558014) - Direct contact with the developer
+- **💻 GitHub Issues**: [Create an issue](https://github.com/888Greys/RAG-AI/issues) for bugs or feature requests
+- **💬 GitHub Discussions**: [Join discussions](https://github.com/888Greys/RAG-AI/discussions) about the project
+
+## 🎯 Roadmap
+
+### Phase 1 (Current - Preview)
+- ✅ Basic chat functionality with RAG
+- ✅ User authentication and registration
+- ✅ Mobile-responsive design
+- ✅ Core KCA University documents
+- 🔄 Uploading comprehensive KCA document library
+
+### Phase 2 (Coming Soon)
+- 📋 Complete KCA University document coverage
+- 🔍 Advanced search and filtering
+- 📱 Progressive Web App (PWA) support
+- 🌍 Offline functionality for key information
+- 📊 Usage analytics and popular questions
+
+### Phase 3 (Future)
+- 🤖 Voice interaction support
+- 📅 Integration with KCA University systems
+- 🎓 Personalized student recommendations
+- 📚 Study group and collaboration features
+- 🏆 Gamification for knowledge sharing
 
 ## 📄 License
 
@@ -262,18 +369,28 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
+- **KCA University** for being an amazing institution worth building for
+- **KCA Students** for inspiration and feedback
 - **Vercel** for the AI SDK and hosting platform
 - **Groq** for ultra-fast AI inference
-- **Supabase** for the database and authentication
 - **Google** for high-quality embeddings
 - **Next.js** team for the amazing framework
+- **Open Source Community** for all the incredible tools
 
-## 📞 Support
+## ���� Support & Contact
 
-- **Documentation**: [AI SDK Docs](https://sdk.vercel.ai/docs)
-- **Issues**: [GitHub Issues](https://github.com/your-username/internal-knowledge-base/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/your-username/internal-knowledge-base/discussions)
+### For Students
+- **📱 WhatsApp**: [+254715558014](https://wa.me/254715558014) - Quick help and support
+- **💻 GitHub**: [888Greys/RAG-AI](https://github.com/888Greys/RAG-AI) - Technical issues and features
+- **📧 Issues**: [Report a problem](https://github.com/888Greys/RAG-AI/issues) - Bug reports and suggestions
+
+### For Developers
+- **📖 Documentation**: [Vercel AI SDK Docs](https://sdk.vercel.ai/docs)
+- **💬 Discussions**: [GitHub Discussions](https://github.com/888Greys/RAG-AI/discussions)
+- **🔧 Contributing**: See the Contributing section above
 
 ---
 
-**Built with ❤️ using the Vercel AI SDK**
+**Built with ❤️ for KCA University students using the Vercel AI SDK**
+
+*Making university life easier, one question at a time.* 🎓✨
