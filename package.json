@@ -9,7 +9,9 @@
     "lint": "next lint",
     "type-check": "tsc --noEmit",
     "test": "echo \"No tests yet\" && exit 0",
-    "upload-docs": "npx tsx upload-documents.ts"
+    "upload-docs": "npx tsx upload-documents.ts",
+    "upload-kca": "npx tsx upload-kca-documents.ts",
+    "upload-pdfs": "npx tsx upload-pdfs.ts"
   },
   "dependencies": {
     "@ai-sdk/google": "^1.2.22",

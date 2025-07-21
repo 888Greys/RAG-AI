@@ -12,28 +12,28 @@ import { Session } from "next-auth";
 
 const suggestedActions = [
   {
-    title: "Admission Info",
-    label: "What are the admission requirements?",
-    action: "What are the admission requirements for KCA University?",
-    icon: "🎓",
+    title: "Library Access",
+    label: "How do I access the e-library?",
+    action: "How do I access the KCA University e-library?",
+    icon: "📚",
   },
   {
-    title: "Academic Calendar",
-    label: "When does the semester start?",
-    action: "When does the next semester start at KCA University?",
-    icon: "📅",
+    title: "APA Formatting",
+    label: "How do I format citations?",
+    action: "How do I format citations in APA 7th edition?",
+    icon: "📝",
+  },
+  {
+    title: "Admission Info",
+    label: "What are admission requirements?",
+    action: "What are the admission requirements for KCA University?",
+    icon: "🎓",
   },
   {
     title: "Student Services",
     label: "What services are available?",
     action: "What student services are available at KCA University?",
     icon: "🏫",
-  },
-  {
-    title: "Fees & Payments",
-    label: "How much are the fees?",
-    action: "What are the fees for different programs at KCA University?",
-    icon: "💰",
   },
 ];
 
@@ -93,68 +93,65 @@ export function Chat({
 
   return (
     <div className="flex flex-col h-dvh bg-gradient-to-br from-slate-50 to-blue-50 dark:from-zinc-900 dark:to-zinc-800">
-      {/* Header */}
-      <div className="flex-shrink-0 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm border-b border-zinc-200 dark:border-zinc-700 px-4 py-3">
-        <div className="max-w-4xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white text-sm font-bold">KB</span>
+      {/* Mobile-Optimized Header */}
+      <div className="flex-shrink-0 bg-white/95 dark:bg-zinc-900/95 backdrop-blur-sm border-b border-zinc-200 dark:border-zinc-700 px-3 sm:px-4 py-2 sm:py-3">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2 sm:gap-3 min-w-0 flex-1">
+            <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+              <span className="text-white text-xs sm:text-sm font-bold">KB</span>
             </div>
-            <div>
-              <h1 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
-                KCA University Knowledge Base
+            <div className="min-w-0 flex-1">
+              <h1 className="text-sm sm:text-lg font-semibold text-zinc-900 dark:text-zinc-100 truncate">
+                KCA University
               </h1>
-              <p className="text-xs text-zinc-500 dark:text-zinc-400">
-                AI Assistant for Students • {messages.length > 0 ? `${messages.length} messages` : 'Ready to help'}
+              <p className="text-xs text-zinc-500 dark:text-zinc-400 truncate">
+                AI Assistant • {messages.length > 0 ? `${messages.length} msgs` : 'Ready'}
               </p>
             </div>
           </div>
           
-          {/* Knowledge Base Status */}
-          <div className="flex items-center gap-2 text-xs">
-            <div className="flex items-center gap-1 px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 rounded-full">
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-              <span>Knowledge Base Active</span>
-            </div>
+          {/* Mobile Status Indicator */}
+          <div className="flex items-center gap-1 px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 rounded-full flex-shrink-0">
+            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full animate-pulse"></div>
+            <span className="text-xs hidden sm:inline">Active</span>
           </div>
         </div>
       </div>
 
-      {/* Main Chat Area */}
-      <div className="flex-1 flex flex-col max-w-4xl mx-auto w-full">
+      {/* Mobile-Optimized Chat Area */}
+      <div className="flex-1 flex flex-col w-full">
         {/* Messages */}
         <div
           ref={messagesContainerRef}
-          className="flex-1 overflow-y-auto px-4 py-6 space-y-6"
+          className="flex-1 overflow-y-auto px-3 sm:px-4 py-3 sm:py-6 space-y-4 sm:space-y-6"
         >
           {messages.length === 0 ? (
-            <div className="flex flex-col items-center justify-center h-full space-y-8">
-              {/* Welcome Section */}
+            <div className="flex flex-col items-center justify-center h-full space-y-6 sm:space-y-8 px-2">
+              {/* Mobile Welcome Section */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="text-center space-y-4"
+                className="text-center space-y-3 sm:space-y-4"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto">
-                  <span className="text-white text-2xl">🧠</span>
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto">
+                  <span className="text-white text-xl sm:text-2xl">🎓</span>
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">
-                    Welcome to KCA University AI Assistant
+                  <h2 className="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">
+                    Welcome to KCA AI Assistant
                   </h2>
-                  <p className="text-zinc-600 dark:text-zinc-400 max-w-md">
-                    Ask questions about admission requirements, academic programs, student services, fees, and anything related to KCA University. 
-                    I&apos;ll search through university documents to provide accurate answers.
+                  <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 max-w-sm sm:max-w-md leading-relaxed">
+                    Ask questions about admission, library services, APA formatting, and anything related to KCA University.
                   </p>
                 </div>
               </motion.div>
 
-              {/* Suggested Actions */}
-              <div className="w-full max-w-2xl">
+              {/* Mobile-Optimized Suggested Actions */}
+              <div className="w-full max-w-lg">
                 <h3 className="text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-3 text-center">
-                  Try asking about:
+                  Popular questions:
                 </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 gap-3">
                   {suggestedActions.map((suggestedAction, index) => (
                     <motion.button
                       key={index}
@@ -167,15 +164,15 @@ export function Chat({
                           content: suggestedAction.action,
                         });
                       }}
-                      className="group p-4 bg-white dark:bg-zinc-800 rounded-xl border border-zinc-200 dark:border-zinc-700 hover:border-blue-300 dark:hover:border-blue-600 hover:shadow-md transition-all duration-200 text-left"
+                      className="group p-3 sm:p-4 bg-white dark:bg-zinc-800 rounded-xl border border-zinc-200 dark:border-zinc-700 hover:border-blue-300 dark:hover:border-blue-600 hover:shadow-md transition-all duration-200 text-left active:scale-95"
                     >
-                      <div className="flex items-start gap-3">
-                        <span className="text-2xl">{suggestedAction.icon}</span>
-                        <div className="flex-1">
-                          <h4 className="font-medium text-zinc-900 dark:text-zinc-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                      <div className="flex items-center gap-3">
+                        <span className="text-xl sm:text-2xl flex-shrink-0">{suggestedAction.icon}</span>
+                        <div className="flex-1 min-w-0">
+                          <h4 className="font-medium text-zinc-900 dark:text-zinc-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors text-sm sm:text-base">
                             {suggestedAction.title}
                           </h4>
-                          <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
+                          <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 mt-1 truncate">
                             {suggestedAction.label}
                           </p>
                         </div>
@@ -199,20 +196,20 @@ export function Chat({
           )}
         </div>
 
-        {/* Error Display */}
+        {/* Mobile Error Display */}
         {error && (
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mx-4 mb-4 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg"
+            className="mx-3 sm:mx-4 mb-3 sm:mb-4 p-3 sm:p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg"
           >
-            <div className="flex items-center gap-2">
-              <span className="text-red-500">⚠️</span>
-              <div>
+            <div className="flex items-start gap-2">
+              <span className="text-red-500 flex-shrink-0">⚠️</span>
+              <div className="min-w-0 flex-1">
                 <p className="text-sm font-medium text-red-800 dark:text-red-200">
                   Something went wrong
                 </p>
-                <p className="text-xs text-red-600 dark:text-red-400 mt-1">
+                <p className="text-xs text-red-600 dark:text-red-400 mt-1 break-words">
                   {error.message}
                 </p>
               </div>
@@ -220,21 +217,21 @@ export function Chat({
           </motion.div>
         )}
 
-        {/* Input Area */}
-        <div className="flex-shrink-0 p-4 bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm border-t border-zinc-200 dark:border-zinc-700">
-          <form onSubmit={handleSubmit} className="max-w-3xl mx-auto">
-            <div className="flex items-end gap-3">
+        {/* Mobile-Optimized Input Area */}
+        <div className="flex-shrink-0 p-3 sm:p-4 bg-white/95 dark:bg-zinc-900/95 backdrop-blur-sm border-t border-zinc-200 dark:border-zinc-700 safe-area-inset-bottom">
+          <form onSubmit={handleSubmit} className="w-full">
+            <div className="flex items-end gap-2 sm:gap-3">
               <div className="flex-1 relative">
                 <input
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
-                  placeholder="Ask about admission, programs, fees, or any KCA University info..."
+                  placeholder="Ask about KCA University..."
                   disabled={isLoading}
-                  className="w-full px-4 py-3 pr-12 bg-white dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed text-zinc-900 dark:text-zinc-100 placeholder-zinc-500 dark:placeholder-zinc-400"
+                  className="w-full px-3 sm:px-4 py-3 pr-10 sm:pr-12 bg-white dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed text-zinc-900 dark:text-zinc-100 placeholder-zinc-500 dark:placeholder-zinc-400 text-sm sm:text-base"
                 />
                 {isLoading && (
                   <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
-                    <div className="w-5 h-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+                    <div className="w-4 h-4 sm:w-5 sm:h-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
                   </div>
                 )}
               </div>
@@ -242,29 +239,25 @@ export function Chat({
               <button
                 type="submit"
                 disabled={isLoading || !input.trim()}
-                className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 disabled:from-zinc-300 disabled:to-zinc-400 text-white rounded-xl font-medium transition-all duration-200 disabled:cursor-not-allowed flex items-center gap-2"
+                className="px-4 sm:px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 disabled:from-zinc-300 disabled:to-zinc-400 text-white rounded-xl font-medium transition-all duration-200 disabled:cursor-not-allowed flex items-center gap-1 sm:gap-2 active:scale-95 flex-shrink-0"
               >
                 {isLoading ? (
                   <>
-                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                    <span>Thinking...</span>
+                    <div className="w-3 h-3 sm:w-4 sm:h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                    <span className="text-sm sm:text-base hidden sm:inline">Thinking...</span>
                   </>
                 ) : (
                   <>
-                    <span>Send</span>
-                    <span>↗</span>
+                    <span className="text-sm sm:text-base">Send</span>
+                    <span className="text-sm sm:text-base">↗</span>
                   </>
                 )}
               </button>
             </div>
             
-            <div className="flex items-center justify-between mt-3 text-xs text-zinc-500 dark:text-zinc-400">
-              <div className="flex items-center gap-4">
-                <span>💡 Tip: Ask specific questions for better results</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span>Powered by Groq + RAG</span>
-              </div>
+            {/* Mobile-friendly tips */}
+            <div className="mt-2 text-xs text-zinc-500 dark:text-zinc-400 text-center">
+              💡 Ask about admission, library, or APA formatting
             </div>
           </form>
         </div>

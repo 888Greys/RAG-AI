@@ -29,12 +29,15 @@ export default function Page() {
   }, [state, router]);
 
   return (
-    <div className="flex h-screen w-screen items-center justify-center bg-white dark:bg-zinc-900">
-      <div className="w-full max-w-md overflow-hidden rounded-2xl gap-12 flex flex-col">
-        <div className="flex flex-col items-center justify-center gap-2 px-4 text-center sm:px-16">
-          <h3 className="text-xl font-semibold dark:text-zinc-50">Sign Up</h3>
+    <div className="flex min-h-screen w-screen items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 dark:from-zinc-900 dark:to-zinc-800 p-4">
+      <div className="w-full max-w-md overflow-hidden rounded-2xl gap-8 sm:gap-12 flex flex-col">
+        <div className="flex flex-col items-center justify-center gap-3 px-4 text-center sm:px-8">
+          <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-2">
+            <span className="text-white text-xl sm:text-2xl">🎓</span>
+          </div>
+          <h3 className="text-xl sm:text-2xl font-semibold dark:text-zinc-50">Join KCA University</h3>
           <p className="text-sm text-gray-500 dark:text-zinc-400">
-            Create an account with your email and password
+            Create your account to access the Knowledge Base
           </p>
         </div>
         <Form action={formAction}>
@@ -43,7 +46,7 @@ export default function Page() {
             {"Already have an account? "}
             <Link
               href="/login"
-              className="font-semibold text-gray-800 hover:underline dark:text-zinc-200"
+              className="font-semibold text-blue-600 hover:underline dark:text-blue-400"
             >
               Sign in
             </Link>
