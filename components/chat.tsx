@@ -144,7 +144,7 @@ export function Chat({
                   </h2>
                   <p className="text-zinc-600 dark:text-zinc-400 max-w-md">
                     Ask questions about company policies, technical documentation, or product specifications. 
-                    I'll search through your knowledge base to provide accurate answers.
+                    I&apos;ll search through your knowledge base to provide accurate answers.
                   </p>
                 </div>
               </motion.div>
