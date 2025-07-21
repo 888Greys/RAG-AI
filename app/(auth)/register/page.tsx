@@ -45,7 +45,7 @@ export default function Page() {
               <span className="text-sm font-medium text-amber-800 dark:text-amber-200">Preview Version</span>
             </div>
             <p className="text-xs text-amber-700 dark:text-amber-300 leading-relaxed">
-              This app is in preview! We're uploading all KCA documents. Soon it will know everything about KCA University. 
+              This app is in preview! We&apos;re uploading all KCA documents. Soon it will know everything about KCA University. 
               The developer is busy, but contributions are welcome!
             </p>
           </div>

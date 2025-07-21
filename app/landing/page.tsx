@@ -65,9 +65,9 @@ export default function LandingPage() {
                 </h3>
               </div>
               <p className="text-amber-700 dark:text-amber-300 text-sm leading-relaxed">
-                This app is currently in preview! We're working hard to upload all KCA University documents. 
-                Soon, it will know everything about KCA University. The developer is quite busy, but if you're 
-                willing to contribute documents or help improve the system, you're very welcome!
+                This app is currently in preview! We&apos;re working hard to upload all KCA University documents. 
+                Soon, it will know everything about KCA University. The developer is quite busy, but if you&apos;re 
+                willing to contribute documents or help improve the system, you&apos;re very welcome!
               </p>
             </div>
 
@@ -108,12 +108,12 @@ export default function LandingPage() {
               {
                 icon: "⚡",
                 title: "Lightning Fast Answers",
-                description: "Get responses in 1-3 seconds using Groq's ultra-fast AI inference"
+                description: "Get responses in 1-3 seconds using Groq&apos;s ultra-fast AI inference"
               },
               {
                 icon: "📚",
                 title: "Library & E-Library Help",
-                description: "Access guides for KCA's library services, e-library, and research resources"
+                description: "Access guides for KCA&apos;s library services, e-library, and research resources"
               },
               {
                 icon: "📝",
@@ -189,7 +189,7 @@ export default function LandingPage() {
                 {
                   step: "4",
                   title: "AI Response Generation",
-                  description: "Groq's Llama 4 Scout generates accurate answers using retrieved context"
+                  description: "Groq&apos;s Llama 4 Scout generates accurate answers using retrieved context"
                 }
               ].map((step, index) => (
                 <motion.div
@@ -256,7 +256,7 @@ export default function LandingPage() {
               Help Us Build the Ultimate KCA Knowledge Base
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              We're looking for contributors to help make this the most comprehensive 
+              We&apos;re looking for contributors to help make this the most comprehensive 
               KCA University resource. Your help can benefit thousands of students!
             </p>
 
