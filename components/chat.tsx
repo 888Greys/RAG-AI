@@ -12,27 +12,27 @@ import { Session } from "next-auth";
 
 const suggestedActions = [
   {
-    title: "Company Policies",
-    label: "What's the vacation policy?",
-    action: "What's the company vacation policy?",
-    icon: "🏢",
+    title: "Admission Info",
+    label: "What are the admission requirements?",
+    action: "What are the admission requirements for KCA University?",
+    icon: "🎓",
   },
   {
-    title: "Technical Docs",
-    label: "How do I authenticate with the API?",
-    action: "How do I authenticate with the API?",
-    icon: "⚙️",
+    title: "Academic Calendar",
+    label: "When does the semester start?",
+    action: "When does the next semester start at KCA University?",
+    icon: "📅",
   },
   {
-    title: "Product Info",
-    label: "What are the system requirements?",
-    action: "What are the system requirements for the product?",
-    icon: "📋",
+    title: "Student Services",
+    label: "What services are available?",
+    action: "What student services are available at KCA University?",
+    icon: "🏫",
   },
   {
-    title: "Expense Policy",
-    label: "How do I submit expenses?",
-    action: "What's the expense reimbursement process?",
+    title: "Fees & Payments",
+    label: "How much are the fees?",
+    action: "What are the fees for different programs at KCA University?",
     icon: "💰",
   },
 ];
@@ -102,10 +102,10 @@ export function Chat({
             </div>
             <div>
               <h1 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
-                Internal Knowledge Base
+                KCA University Knowledge Base
               </h1>
               <p className="text-xs text-zinc-500 dark:text-zinc-400">
-                Powered by AI • {messages.length > 0 ? `${messages.length} messages` : 'Ready to help'}
+                AI Assistant for Students • {messages.length > 0 ? `${messages.length} messages` : 'Ready to help'}
               </p>
             </div>
           </div>
@@ -140,11 +140,11 @@ export function Chat({
                 </div>
                 <div>
                   <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">
-                    Welcome to your Knowledge Base
+                    Welcome to KCA University AI Assistant
                   </h2>
                   <p className="text-zinc-600 dark:text-zinc-400 max-w-md">
-                    Ask questions about company policies, technical documentation, or product specifications. 
-                    I&apos;ll search through your knowledge base to provide accurate answers.
+                    Ask questions about admission requirements, academic programs, student services, fees, and anything related to KCA University. 
+                    I&apos;ll search through university documents to provide accurate answers.
                   </p>
                 </div>
               </motion.div>
@@ -228,7 +228,7 @@ export function Chat({
                 <input
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
-                  placeholder="Ask about policies, technical docs, or product info..."
+                  placeholder="Ask about admission, programs, fees, or any KCA University info..."
                   disabled={isLoading}
                   className="w-full px-4 py-3 pr-12 bg-white dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed text-zinc-900 dark:text-zinc-100 placeholder-zinc-500 dark:placeholder-zinc-400"
                 />

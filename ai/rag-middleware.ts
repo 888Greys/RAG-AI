@@ -78,15 +78,20 @@ export const ragMiddleware: Experimental_LanguageModelV1Middleware = {
       value: hypotheticalAnswer,
     });
 
-    // find relevant chunks from shared knowledge base
-    // If no files selected, search all shared documents
+    // find relevant chunks from knowledge base
+    // Search both shared documents and KCA University documents
     let searchPaths: string[];
     if (selection.length === 0) {
-      // Search all shared documents
-      searchPaths = ['shared/%']; // This will be handled in the database query
+      // Search all documents (shared + KCA)
+      searchPaths = ['shared/%', 'kca/%']; // This will be handled in the database query
     } else {
-      // Search specific shared documents
-      searchPaths = selection.map((path) => `shared/${path}`);
+      // Search specific documents
+      searchPaths = selection.map((path) => {
+        if (path.startsWith('kca/') || path.startsWith('shared/')) {
+          return path;
+        }
+        return `shared/${path}`;
+      });
     }
     
     const chunksBySelection = await getChunksByFilePaths({

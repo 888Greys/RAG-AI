@@ -133,19 +133,36 @@ export async function getChunksByFilePaths({
   filePaths: Array<string>;
 }) {
   if (!isDatabaseAvailable) {
-    // For mock: if searching for 'shared/%', return all shared chunks
-    if (filePaths.includes('shared/%')) {
-      return mockChunks.filter(c => c.filePath.startsWith('shared/'));
+    // For mock: handle wildcard patterns
+    if (filePaths.includes('shared/%') || filePaths.includes('kca/%')) {
+      return mockChunks.filter(c => 
+        c.filePath.startsWith('shared/') || c.filePath.startsWith('kca/')
+      );
     }
     return mockChunks.filter(c => filePaths.includes(c.filePath));
   }
   
-  // Handle wildcard search for all shared documents
-  if (filePaths.includes('shared/%')) {
+  // Handle wildcard search patterns
+  const hasWildcards = filePaths.some(path => path.includes('%'));
+  
+  if (hasWildcards) {
+    const conditions = filePaths.map(path => {
+      if (path.includes('%')) {
+        return sql`${chunk.filePath} LIKE ${path}`;
+      }
+      return sql`${chunk.filePath} = ${path}`;
+    });
+    
+    // Combine conditions with OR
+    const whereClause = conditions.reduce((acc, condition, index) => {
+      if (index === 0) return condition;
+      return sql`${acc} OR ${condition}`;
+    });
+    
     return await db
       .select()
       .from(chunk)
-      .where(sql`${chunk.filePath} LIKE 'shared/%'`);
+      .where(whereClause);
   }
   
   return await db
