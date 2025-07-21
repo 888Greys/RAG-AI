@@ -6,43 +6,50 @@ export const Navbar = async () => {
   let session = await auth();
 
   return (
-    <div className="bg-white absolute top-0 left-0 w-dvw border-b dark:border-zinc-800 py-2 px-3 justify-between flex flex-row items-center dark:bg-zinc-900 z-30">
-      <div className="flex flex-row gap-3 items-center">
+    <div className="bg-white/95 dark:bg-zinc-900/95 backdrop-blur-sm absolute top-0 left-0 w-full border-b border-zinc-200 dark:border-zinc-700 py-3 px-4 flex items-center justify-between z-50 shadow-sm">
+      <div className="flex items-center gap-4">
         <History />
-        <div className="text-sm dark:text-zinc-300">
-          Internal Knowledge Base
+        <div className="flex items-center gap-3">
+          <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-600 rounded-md flex items-center justify-center">
+            <span className="text-white text-xs font-bold">KB</span>
+          </div>
+          <span className="text-sm font-medium text-zinc-900 dark:text-zinc-100">
+            Internal Knowledge Base
+          </span>
         </div>
       </div>
-
-      {session ? (
-        <div className="group py-1 px-2 rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-800 cursor-pointer relative">
-          <div className="text-sm dark:text-zinc-400 z-10">
-            {session.user?.email}
+      
+      <div className="flex items-center gap-3">
+        {session && (
+          <div className="hidden sm:flex items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400">
+            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+            <span>Signed in as {session.user?.email}</span>
           </div>
-          <div className="flex-col absolute top-6 right-0 w-full pt-5 group-hover:flex hidden">
-            <form
-              action={async () => {
-                "use server";
-                await signOut();
-              }}
+        )}
+        
+        {session ? (
+          <form
+            action={async () => {
+              "use server";
+              await signOut();
+            }}
+          >
+            <button
+              type="submit"
+              className="text-sm px-3 py-1.5 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 rounded-lg text-zinc-700 dark:text-zinc-300 transition-colors"
             >
-              <button
-                type="submit"
-                className="text-sm w-full p-1 rounded-md bg-red-500 text-red-50 hover:bg-red-600"
-              >
-                Sign out
-              </button>
-            </form>
-          </div>
-        </div>
-      ) : (
-        <Link
-          href="login"
-          className="text-sm p-1 px-2 bg-zinc-900 rounded-md text-zinc-50 dark:bg-zinc-100 dark:text-zinc-900"
-        >
-          Login
-        </Link>
-      )}
+              Sign out
+            </button>
+          </form>
+        ) : (
+          <Link
+            href="login"
+            className="text-sm px-3 py-1.5 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 rounded-lg text-white transition-all"
+          >
+            Login
+          </Link>
+        )}
+      </div>
     </div>
   );
 };
